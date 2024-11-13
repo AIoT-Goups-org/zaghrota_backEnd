@@ -1,6 +1,11 @@
-// import authRouter from './modules/user.router.js'
+import path from 'path';
+import { fileURLToPath } from 'url';
 import mohafzaRouter from './modules/mohafza/mohafza.router.js'
 import morgan from 'morgan'
+
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 
 export const appRouter = (app, express) => {
@@ -9,6 +14,10 @@ export const appRouter = (app, express) => {
   if (process.env.NODE_ENV === "dev" ) {
     app.use(morgan("common"))
   }
+
+  
+  // serving the images
+  app.use('/images', express.static(path.join(__dirname, './utils/Wedding halls')));
   
   // Global Middleware 
   app.use(express.json())

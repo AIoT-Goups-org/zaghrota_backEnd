@@ -2,10 +2,13 @@
   "name": "zaghrota_backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js","scripts": {
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
     "test": "jest --verbose --coverage",
     "start:dev": "nodemon index.js",
-    "start": "node index.js"
+    "start": "node index.js",
+    "migration": "node ./migration/migration.js"
   },
   "author": "",
   "license": "ISC",
@@ -23,7 +26,8 @@
     "lodash": "^4.17.21",
     "mongoose": "^8.8.0",
     "multer": "^1.4.5-lts.1",
-    "winston": "^3.16.0"
+    "winston": "^3.16.0",
+    "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "jest": "^29.7.0",

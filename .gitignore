@@ -1,7 +1,4 @@
-.env
 node_modules
-logs
 package-lock.json
-uploads
-.vercel
-chicken-88fdc-firebase-adminsdk-2hzom-a846a397de.json
+logs
+.env

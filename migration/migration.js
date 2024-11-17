@@ -57,13 +57,13 @@ async function mig() {
             }
             const hallDoc = new Hall({
                 cityId: existingCity._id,
-                name: row['اسم القاعه'],
+                name: row['اسم القاعه'] || "_",
                 city: existingCity._id,
-                phone: row['الهاتف'],
-                facebook: row['فيسبوك'],
-                instagram: row['انستجرام'],
-                photos: row['photo'],
-                location: row['اللوكيشن']
+                phone: row['الهاتف'] || "_",
+                facebook: row['فيسبوك'] || "_",
+                instagram: row['انستجرام'] || "_",
+                photos: row['photo'] || "_",
+                location: row['اللوكيشن'] || "_",
             });
             await hallDoc.save();
         }

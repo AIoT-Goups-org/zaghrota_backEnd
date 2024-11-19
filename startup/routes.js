@@ -6,6 +6,7 @@ import errorMiddleware from '../middleware/error.js';
 import provinceRouter from '../router/province.js';
 import cityRouter from '../router/city.js';
 import hallRouter from '../router/hall.js';
+import calendarRouter from '../router/calendar.js';
 
 
 export default function (app) {
@@ -37,6 +38,7 @@ export default function (app) {
     app.use('/api/provinces', provinceRouter);
     app.use('/api/cities', cityRouter);
     app.use('/api/halls', hallRouter);
+    app.use('/api/calendars', calendarRouter);
 
     app.use(errorMiddleware)
 }

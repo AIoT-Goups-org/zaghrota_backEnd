@@ -18,7 +18,7 @@ router.post("/", async (req, res) => {
         const calendar = new Calendar({
             date: req.body.date,
             title: req.body.title,
-            description: req.body.description,
+            content: req.body.content,
             hash: req.body.hash,
             type: req.body.type
         });

@@ -9,6 +9,8 @@ import hallRouter from '../router/hall.js';
 import calendarRouter from '../router/calendar.js';
 import bridegroomRouter from '../router/bridegroom.js';
 import brideRouter from '../router/bride.js';
+import DecorationRouter from '../router/decoration.js';
+import CarDecorationRouter from '../router/cardecoration.js';
 
 
 export default function (app) {
@@ -43,6 +45,8 @@ export default function (app) {
     app.use('/api/calendars', calendarRouter);
     app.use('/api/bridegrooms', bridegroomRouter);
     app.use('/api/brides', brideRouter);
+    app.use('/api/decorations', DecorationRouter);
+    app.use('/api/cardecorations', CarDecorationRouter);
 
     app.use(errorMiddleware)
 }

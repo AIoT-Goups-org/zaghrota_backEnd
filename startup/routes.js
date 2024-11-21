@@ -11,6 +11,8 @@ import bridegroomRouter from '../router/bridegroom.js';
 import brideRouter from '../router/bride.js';
 import DecorationRouter from '../router/decoration.js';
 import CarDecorationRouter from '../router/cardecoration.js';
+import buffetRouter from '../router/buffet.js';
+
 
 
 export default function (app) {
@@ -47,6 +49,7 @@ export default function (app) {
     app.use('/api/brides', brideRouter);
     app.use('/api/decorations', DecorationRouter);
     app.use('/api/cardecorations', CarDecorationRouter);
+    app.use('/api/buffets', buffetRouter);
 
     app.use(errorMiddleware)
 }

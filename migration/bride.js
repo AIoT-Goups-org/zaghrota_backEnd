@@ -9,7 +9,7 @@ DB_start();
 
 
 // Load Excel file
-const filePath = './migration/نسخة من عروسه اكسل.xlsx'; // Path to your Excel file
+const filePath = '../migration/نسخة من عروسه اكسل.xlsx'; // Path to your Excel file
 const workbook = XLSX.readFile(filePath);
 const sheetName = workbook.SheetNames[0]; // Use the first sheet
 const data = XLSX.utils.sheet_to_json(workbook.Sheets[sheetName]);

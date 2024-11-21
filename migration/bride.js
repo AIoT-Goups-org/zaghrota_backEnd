@@ -17,7 +17,7 @@ const data = XLSX.utils.sheet_to_json(workbook.Sheets[sheetName]);
 // Transform data into MongoDB-compatible format
 const transformedData = data.map(row => ({
     imageUrl: row[Object.keys(row)[0]], // First column
-    description: row[Object.keys(row)[1]] || "No description available" // Second column
+    description: (row[Object.keys(row)[1]] || "No description available").trim() // Second column
 }));
 
 await Bride.deleteMany({}); // Clear existing data

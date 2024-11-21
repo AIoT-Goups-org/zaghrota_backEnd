@@ -1,15 +1,17 @@
 import express from "express";
-import Bride from "../models/bridegroom.js";
+import Bride from "../models/bride.js";
 
 const router = express.Router();
 
-router.get("/:description", async (req, res) => {
+router.get("/", async (req, res) => {
     try {
-        const bridegroom = await Bride.find({ description: req.params.description });
-        if (!bridegroom) {
-            return res.status(404).send("Bridegroom not found");
+
+        console.log(req.body);
+        const bride = await Bride.find(req.body);
+        if (!bride) {
+            return res.status(404).send("Bride not found");
         }
-        res.send(bridegroom);
+        res.send(bride);
     } catch (error) {
         res.status(500).send
     }

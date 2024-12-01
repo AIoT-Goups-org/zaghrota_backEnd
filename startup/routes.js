@@ -12,6 +12,7 @@ import brideRouter from '../router/bride.js';
 import DecorationRouter from '../router/decoration.js';
 import CarDecorationRouter from '../router/cardecoration.js';
 import buffetRouter from '../router/buffet.js';
+import privacyPolicyRouter from '../router/privacy.policy.js'; 
 
 
 
@@ -50,6 +51,7 @@ export default function (app) {
     app.use('/api/decorations', DecorationRouter);
     app.use('/api/cardecorations', CarDecorationRouter);
     app.use('/api/buffets', buffetRouter);
+    app.use('/privacy-policy', privacyPolicyRouter);
 
     app.use(errorMiddleware)
 }
